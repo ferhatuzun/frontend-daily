@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Movie App</title>
+</head>
+<body>
+    
+
+    <div class="container">
+        <div id="search">
+            <input type="text" class="movieName" placeholder="Lütfen film adı giriniz.">
+            <button class="btnSearch">Ara</button>
+        </div>
+        <div id="movie">
+            <div class="error">Film Bulunamadı</div>
+            <div id="movieDetails">
+                <div id="movieContent">
+                    <img src="" class="movieImage" onerror="this.src='error.webp'">
+                    <div class="extraContent">
+                        <h3 class="movieTitle"></h3>
+                        <div class="movieStar">
+                            <img src="star-icon.svg" class="starIcon">
+                            <p class="movieImdb"></p>
+                        </div>
+                        <div class="movieDetail">
+                            <p class="rated"></p>
+                            <p class="year"></p>
+                            <p class="runtime"></p>
+                        </div>
+                        <div class="movieCategory">
+                        </div>
+                    </div>
+                </div>
+                <div class="plotContainer">
+                    <h3>Plot:</h3>
+                    <p class="plotText"></p>
+                </div>
+                <div class="castContainer">
+                    <h3>Cast:</h3>
+                    <p class="castText"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
