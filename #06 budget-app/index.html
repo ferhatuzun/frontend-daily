@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" href="img/icon.png" />
+    <title>Budget App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="budget">
+        <p class="title">Hesap</p>
+        <input
+          class="totalBudget"
+          type="number"
+          placeholder="Toplam Paranızı Giriniz"
+        />
+        <button class="btn-primary btnTotalBudget">Hesabı Güncelle</button>
+      </div>
+      <div id="expenses">
+        <p class="title">Harcama Ekle</p>
+        <input class="productName" type="text" placeholder="Ürün Adı Giriniz" />
+        <input
+          class="productPrice"
+          type="number"
+          placeholder="Ürün Fiyatı Giriniz"
+        />
+        <button class="btn-primary btnAddExpenses">Harcama Ekle</button>
+      </div>
+      <div id="detail">
+        <div>
+          <p class="title">Hesap</p>
+          <p class="money">0</p>
+        </div>
+        <div>
+          <p class="title">Harcanan</p>
+          <p class="expenses">0</p>
+        </div>
+        <div>
+          <p class="title">Kalan</p>
+          <p class="balance">0</p>
+        </div>
+      </div>
+      <div id="expensesList">
+        <p class="title">Alınan Ürünler</p>
+        <div class="expensesDetail">
+            
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/3232e7f7ad.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>

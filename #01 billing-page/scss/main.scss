@@ -1,0 +1,290 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #e5e5e5;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+}
+img {
+  width: 100%;
+  display: inline-block;
+}
+%poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+%poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+%poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+%poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+@mixin button($color) {
+  padding: 7px 15px;
+  border-radius: 8px;
+  background-color: transparent;
+  cursor: pointer;
+  @extend %poppins-medium;
+  font-size: 12px;
+  color: $color;
+  border: 1px solid $color;
+}
+.container {
+  width: 1200px;
+  height: 100vh;
+  margin: auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#background {
+  background-color: #ee4d38;
+  width: 200px;
+  height: 100vh;
+  border-radius: 46px;
+}
+
+#panel {
+  width: 100%;
+  height: 95vh;
+  background-color: #fff;
+  border-radius: 30px;
+  position: absolute;
+  margin-left: 70px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  .left {
+    grid-column: 1 / span 3;
+    background-color: #f8f8ff;
+    border-radius: 30px 0 0 30px;
+    position: relative;
+    height: 95vh;
+    .leftContainer {
+      width: 80%;
+      margin: auto;
+      .userContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 48px;
+        .profileImage {
+          width: 55px;
+          height: 55px;
+        }
+        .userDetail {
+          margin-left: 15px;
+          h3 {
+            @extend %poppins-bold;
+            font-size: 16px;
+          }
+          h6 {
+            @extend %poppins-regular;
+            font-size: 14px;
+          }
+        }
+      }
+
+      .navbarContainer {
+        margin-top: 30px;
+        ul {
+          li {
+            display: flex;
+            position: relative;
+            align-items: center;
+            font-size: 14px;
+            @extend %poppins-regular;
+            gap: 15px;
+            padding: 5px 15px;
+            &:hover {
+              cursor: pointer;
+              @extend %poppins-medium;
+              &::before {
+                background-color: #ee4d38;
+                position: absolute;
+                content: "";
+                width: 5px;
+                height: 100%;
+                border-radius: 3px;
+                top: 0;
+                left: 0;
+              }
+            }
+
+            .menuIcon {
+              width: 32px;
+            }
+          }
+        }
+      }
+
+      .logout {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 28px;
+
+        &:hover {
+          cursor: pointer;
+        }
+        img {
+          width: 32px;
+        }
+        h4 {
+          @extend %poppins-regular;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .right {
+    grid-column: 4/ 13;
+    .rightContainer {
+      width: 90%;
+      margin: auto;
+      padding: 50px 0 0 0;
+      .title h1 {
+        @extend %poppins-bold;
+        font-size: 32px;
+      }
+      .orderContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 50px;
+        .leftOrder {
+          grid-column: 1 / span 2;
+          h3 {
+            @extend %poppins-bold;
+            font-size: 16px;
+          }
+          p {
+            @extend %poppins-medium;
+            font-size: 14px;
+          }
+          .orderDetail {
+            margin-top: 20px;
+            .orderTitles {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              margin-bottom: 15px;
+              width: 95%;
+              p {
+                @extend %poppins-light;
+                font-size: 14px;
+              }
+            }
+            .orderList {
+              display: grid;
+              grid-template-rows: repeat(4, 1fr);
+              gap: 10px;
+              width: 95%;
+              .orderItem {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                border-radius: 15px;
+                align-items: center;
+                padding: 10px 5px;
+                &:hover {
+                  box-shadow: 10px 10px 21px -8px rgba(0, 0, 0, 0.75);
+                }
+                p {
+                  @extend %poppins-medium;
+                  font-size: 14px;
+                }
+                .orderButton {
+                  @include button(#000);
+                }
+              }
+            }
+          }
+          .loadButton {
+            display: inline-block;
+            @extend %poppins-medium;
+            font-size: 16px;
+            color: #ee4d38;
+            text-decoration: underline;
+            margin-top: 0px;
+          }
+        }
+        .rightOrder {
+          grid-column: 3 / span 1;
+          margin-left: 30px;
+          .yourPlan {
+            background-color: #ee4d38;
+            padding: 25px;
+            border-radius: 16px;
+            color: #fff;
+            h4 {
+              @extend %poppins-medium;
+              font-size: 16px;
+              margin-bottom: 15px;
+            }
+            h2 {
+              @extend %poppins-bold;
+              font-size: 24px;
+            }
+            h5 {
+              @extend %poppins-regular;
+              font-size: 11px;
+              margin-bottom: 20px;
+            }
+            button {
+              @include button(#fff);
+            }
+          }
+        }
+        .paymentMethod {
+          grid-column: 1 / span 2;
+          margin-top: 50px;
+          h2 {
+            @extend %poppins-bold;
+            font-size: 16px;
+          }
+          p {
+            @extend %poppins-medium;
+            font-size: 14px;
+          }
+          .creditCard {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            .card {
+              display: flex;
+              align-items: center;
+              gap: 15px;
+            }
+            .cardLogo {
+              width: 87px;
+            }
+            .cardNumber {
+              @extend %poppins-medium;
+              font-size: 16px;
+            }
+            button {
+              @include button(#000);
+            }
+          }
+        }
+      }
+    }
+  }
+}

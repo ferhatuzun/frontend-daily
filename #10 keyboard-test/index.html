@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="images/icon.png" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Keyboard Test</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="detail">
+        <div class="score">
+          <p>Süre:</p>
+          <p class="time">60s</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="textContent"></div>
+      </div>
+
+      <textarea
+        class="userText"
+        placeholder="Bu alana yazabilirsiniz."
+        disabled
+      ></textarea>
+
+      <button class="btnStart">Testi Başlat</button>
+      <button class="btnFinish">Testi Bitir</button>
+      <button class="btnRestart">Tekrar Başlat</button>
+      <div id="result">
+        <h3>Result</h3>
+        <div>
+          <div class="accuracyContainer">
+            <p>Doğruluk: </p>
+            <p class="accuracy"></p>
+          </div>
+          <div class="mistakesContainer">
+            <p>Hatalar: </p>
+            <p class="mistakes"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

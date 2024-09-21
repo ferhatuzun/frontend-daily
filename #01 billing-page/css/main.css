@@ -1,0 +1,224 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  background-color: #e5e5e5; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style-type: none; }
+
+img {
+  width: 100%;
+  display: inline-block; }
+
+#panel .left .leftContainer .userContainer .userDetail h3, #panel .right .rightContainer .title h1, #panel .right .rightContainer .orderContainer .leftOrder h3, #panel .right .rightContainer .orderContainer .rightOrder .yourPlan h2, #panel .right .rightContainer .orderContainer .paymentMethod h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal; }
+
+#panel .left .leftContainer .navbarContainer ul li:hover, #panel .right .rightContainer .orderContainer .leftOrder p, #panel .right .rightContainer .orderContainer .leftOrder .orderDetail .orderList .orderItem p, #panel .right .rightContainer .orderContainer .leftOrder .orderDetail .orderList .orderItem .orderButton, #panel .right .rightContainer .orderContainer .leftOrder .loadButton, #panel .right .rightContainer .orderContainer .rightOrder .yourPlan h4, #panel .right .rightContainer .orderContainer .rightOrder .yourPlan button, #panel .right .rightContainer .orderContainer .paymentMethod p, #panel .right .rightContainer .orderContainer .paymentMethod .creditCard .cardNumber, #panel .right .rightContainer .orderContainer .paymentMethod .creditCard button {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal; }
+
+#panel .left .leftContainer .userContainer .userDetail h6, #panel .left .leftContainer .navbarContainer ul li, #panel .left .leftContainer .logout h4, #panel .right .rightContainer .orderContainer .rightOrder .yourPlan h5 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal; }
+
+#panel .right .rightContainer .orderContainer .leftOrder .orderDetail .orderTitles p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal; }
+
+.container {
+  width: 1200px;
+  height: 100vh;
+  margin: auto;
+  position: relative;
+  display: flex;
+  align-items: center; }
+
+#background {
+  background-color: #ee4d38;
+  width: 200px;
+  height: 100vh;
+  border-radius: 46px; }
+
+#panel {
+  width: 100%;
+  height: 95vh;
+  background-color: #fff;
+  border-radius: 30px;
+  position: absolute;
+  margin-left: 70px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); }
+  #panel .left {
+    grid-column: 1 / span 3;
+    background-color: #f8f8ff;
+    border-radius: 30px 0 0 30px;
+    position: relative;
+    height: 95vh; }
+    #panel .left .leftContainer {
+      width: 80%;
+      margin: auto; }
+      #panel .left .leftContainer .userContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 48px; }
+        #panel .left .leftContainer .userContainer .profileImage {
+          width: 55px;
+          height: 55px; }
+        #panel .left .leftContainer .userContainer .userDetail {
+          margin-left: 15px; }
+          #panel .left .leftContainer .userContainer .userDetail h3 {
+            font-size: 16px; }
+          #panel .left .leftContainer .userContainer .userDetail h6 {
+            font-size: 14px; }
+      #panel .left .leftContainer .navbarContainer {
+        margin-top: 30px; }
+        #panel .left .leftContainer .navbarContainer ul li {
+          display: flex;
+          position: relative;
+          align-items: center;
+          font-size: 14px;
+          gap: 15px;
+          padding: 5px 15px; }
+          #panel .left .leftContainer .navbarContainer ul li:hover {
+            cursor: pointer; }
+            #panel .left .leftContainer .navbarContainer ul li:hover::before {
+              background-color: #ee4d38;
+              position: absolute;
+              content: "";
+              width: 5px;
+              height: 100%;
+              border-radius: 3px;
+              top: 0;
+              left: 0; }
+          #panel .left .leftContainer .navbarContainer ul li .menuIcon {
+            width: 32px; }
+      #panel .left .leftContainer .logout {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 28px; }
+        #panel .left .leftContainer .logout:hover {
+          cursor: pointer; }
+        #panel .left .leftContainer .logout img {
+          width: 32px; }
+        #panel .left .leftContainer .logout h4 {
+          font-size: 14px; }
+  #panel .right {
+    grid-column: 4/ 13; }
+    #panel .right .rightContainer {
+      width: 90%;
+      margin: auto;
+      padding: 50px 0 0 0; }
+      #panel .right .rightContainer .title h1 {
+        font-size: 32px; }
+      #panel .right .rightContainer .orderContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 50px; }
+        #panel .right .rightContainer .orderContainer .leftOrder {
+          grid-column: 1 / span 2; }
+          #panel .right .rightContainer .orderContainer .leftOrder h3 {
+            font-size: 16px; }
+          #panel .right .rightContainer .orderContainer .leftOrder p {
+            font-size: 14px; }
+          #panel .right .rightContainer .orderContainer .leftOrder .orderDetail {
+            margin-top: 20px; }
+            #panel .right .rightContainer .orderContainer .leftOrder .orderDetail .orderTitles {
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);
+              margin-bottom: 15px;
+              width: 95%; }
+              #panel .right .rightContainer .orderContainer .leftOrder .orderDetail .orderTitles p {
+                font-size: 14px; }
+            #panel .right .rightContainer .orderContainer .leftOrder .orderDetail .orderList {
+              display: grid;
+              grid-template-rows: repeat(4, 1fr);
+              gap: 10px;
+              width: 95%; }
+              #panel .right .rightContainer .orderContainer .leftOrder .orderDetail .orderList .orderItem {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                border-radius: 15px;
+                align-items: center;
+                padding: 10px 5px; }
+                #panel .right .rightContainer .orderContainer .leftOrder .orderDetail .orderList .orderItem:hover {
+                  box-shadow: 10px 10px 21px -8px rgba(0, 0, 0, 0.75); }
+                #panel .right .rightContainer .orderContainer .leftOrder .orderDetail .orderList .orderItem p {
+                  font-size: 14px; }
+                #panel .right .rightContainer .orderContainer .leftOrder .orderDetail .orderList .orderItem .orderButton {
+                  padding: 7px 15px;
+                  border-radius: 8px;
+                  background-color: transparent;
+                  cursor: pointer;
+                  font-size: 12px;
+                  color: #000;
+                  border: 1px solid #000; }
+          #panel .right .rightContainer .orderContainer .leftOrder .loadButton {
+            display: inline-block;
+            font-size: 16px;
+            color: #ee4d38;
+            text-decoration: underline;
+            margin-top: 0px; }
+        #panel .right .rightContainer .orderContainer .rightOrder {
+          grid-column: 3 / span 1;
+          margin-left: 30px; }
+          #panel .right .rightContainer .orderContainer .rightOrder .yourPlan {
+            background-color: #ee4d38;
+            padding: 25px;
+            border-radius: 16px;
+            color: #fff; }
+            #panel .right .rightContainer .orderContainer .rightOrder .yourPlan h4 {
+              font-size: 16px;
+              margin-bottom: 15px; }
+            #panel .right .rightContainer .orderContainer .rightOrder .yourPlan h2 {
+              font-size: 24px; }
+            #panel .right .rightContainer .orderContainer .rightOrder .yourPlan h5 {
+              font-size: 11px;
+              margin-bottom: 20px; }
+            #panel .right .rightContainer .orderContainer .rightOrder .yourPlan button {
+              padding: 7px 15px;
+              border-radius: 8px;
+              background-color: transparent;
+              cursor: pointer;
+              font-size: 12px;
+              color: #fff;
+              border: 1px solid #fff; }
+        #panel .right .rightContainer .orderContainer .paymentMethod {
+          grid-column: 1 / span 2;
+          margin-top: 50px; }
+          #panel .right .rightContainer .orderContainer .paymentMethod h2 {
+            font-size: 16px; }
+          #panel .right .rightContainer .orderContainer .paymentMethod p {
+            font-size: 14px; }
+          #panel .right .rightContainer .orderContainer .paymentMethod .creditCard {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px; }
+            #panel .right .rightContainer .orderContainer .paymentMethod .creditCard .card {
+              display: flex;
+              align-items: center;
+              gap: 15px; }
+            #panel .right .rightContainer .orderContainer .paymentMethod .creditCard .cardLogo {
+              width: 87px; }
+            #panel .right .rightContainer .orderContainer .paymentMethod .creditCard .cardNumber {
+              font-size: 16px; }
+            #panel .right .rightContainer .orderContainer .paymentMethod .creditCard button {
+              padding: 7px 15px;
+              border-radius: 8px;
+              background-color: transparent;
+              cursor: pointer;
+              font-size: 12px;
+              color: #000;
+              border: 1px solid #000; }

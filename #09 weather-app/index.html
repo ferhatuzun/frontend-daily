@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Weather App</title>
+</head>
+<body>
+
+    <div id="container">
+        <div id="search">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" id="country" placeholder="Enter Location"">
+            <i class="fa-solid fa-magnifying-glass searchBtn"></i>
+        </div>
+        <div id="result">
+            <div id="onError">
+                <img src="images/404.png" class="img404">
+                <p class="text404">Oops! Invalid location</p>
+            </div>
+            <div id="resultContainer">
+                <img src="" class="resultImg">
+                <div class="centigradeContainer">
+                    <p class="centigradeText">
+                    <span>°C</span>
+
+                    </p>
+                </div>
+                <h4 class="weatherInfo"></h4>
+                <div class="extra">
+                    <div class="humidityContainer">
+                        <i class="fa-solid fa-water"></i>
+                        <div>
+                            <p class="humidityText"></p>
+                            <p>Humidity</p>
+                        </div>
+                    </div>
+                    <div class="windContainer">
+                        <i class="fa-solid fa-wind"></i>
+                        <div>
+                            <p class="windText"></p>
+                            <p>Wind Speed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/3232e7f7ad.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>

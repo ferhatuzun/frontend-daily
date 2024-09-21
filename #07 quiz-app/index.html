@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/star.png" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Quiz App</title>
+  </head>
+  <body>
+    <div id="screen">
+      <div class="timerContainer">
+        <div class="timer"></div>
+      </div>
+      <div id="startScreen">
+        <img src="img/star.png" class="logo" />
+        <h3>Selam!</h3>
+        <h3>Teste hazır mısın?</h3>
+        <button class="btnPlay">BAŞLA</button>
+      </div>
+      <div id="quizScreen">
+        <div class="timeContainer">
+          <img src="img/icon.png" alt="" />
+          <p class="questionTime">10</p>
+        </div>
+        <div class="questionLength"></div>
+        <div class="questionContainer">
+          <p class="question">
+          </p>
+        </div>
+        <div class="options">
+          <div>
+            <button class="optionA option"></button>
+            <p>A</p>
+          </div>
+          <div>
+            <button class="optionB option"></button>
+            <p>B</p>
+          </div>
+          <div>
+            <button class="optionC option"></button>
+            <p>C</p>
+          </div>
+          <div>
+            <button class="optionD option"></button>
+            <p>D</p>
+          </div>
+        </div>
+        <button class="btnNext">Sonraki Soru</button>
+      </div>
+      <div id="endScreen">
+        <p class="scoreInfo">Lorem ipsum dolor sit amet consectetur.</p>
+        <button class="btnRestart">Tekrar Başla</button>
+      </div>
+    </div>
+
+    <script src="js/ui.js"></script>
+    <script src="js/question.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

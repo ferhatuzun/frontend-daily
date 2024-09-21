@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="image/icon.png">
+    <title>Music Player</title>
+</head>
+<body>
+    <div class="images"></div>
+    <div id="musicPlayer">
+        <div id="musicImage">
+            <div></div>
+        </div>
+        <div class="soundControl">
+            <input type="range" class="soundLevel" min="0" max="1" step="0.01" value="100">
+            <i class="fa-solid fa-volume-high"></i>
+        </div>
+        <div id="musicDetail">
+            <p class="songName"></p>
+            <p class="singerName"></p>
+        </div>
+        <div id="controller">
+            <div id="duration">
+                <span class="startTime">00:00</span> 
+                <span class="endTime">00:00</span>
+            </div>
+            <input type="range" class="progressbar" min="0" value="0">
+            <div class="control">
+                <i class="fa-solid fa-backward"></i>
+                <i class="fa-solid fa-play"></i>
+                <i class="fa-solid fa-forward"></i>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/3232e7f7ad.js" crossorigin="anonymous"></script>
+</body>
+</html>

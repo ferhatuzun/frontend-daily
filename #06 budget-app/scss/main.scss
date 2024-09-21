@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  background-color: #d1ddf7;
+}
+%poppins-medium {
+  font-family: "Poppins", system-ui;
+  font-weight: 500;
+  font-style: normal;
+}
+%card-template {
+  background-color: #fff;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 1rem;
+  .title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 95vw;
+  margin: auto;
+  gap: 2rem;
+  @extend %poppins-medium;
+
+  #budget,
+  #expenses {
+    @extend %card-template;
+    .productName {
+      margin-bottom: 1rem !important;
+    }
+    .totalBudget,
+    .productName,
+    .productPrice {
+      width: 100%;
+      padding: 1rem;
+      border: 1px solid gray;
+      border-radius: 0.5rem;
+      font-weight: 400;
+      @extend %poppins-medium;
+      margin-bottom: 2rem;
+      &::placeholder {
+        font-weight: 300;
+      }
+    }
+    .btn-primary {
+      background-color: #2e67f7;
+      padding: 1.2rem 1.8rem;
+      @extend %poppins-medium;
+      color: #fff;
+      border: none;
+      border-radius: 0.7rem;
+      cursor: pointer;
+      transition: background-color 0.1s ease-in;
+      &:hover {
+        background-color: #0740d3;
+      }
+    }
+  }
+
+  // !
+  #detail {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 2rem;
+    grid-column: 1 / span 2;
+    background-color: #2e67f7;
+    border-radius: 0.5rem;
+    color: #fff;
+    .title {
+      font-weight: 600;
+      letter-spacing: 0.05rem;
+    }
+    .money,
+    .expenses,
+    .balance {
+      font-weight: 300;
+    }
+  }
+
+  // !
+  #expensesList {
+    grid-column: 1 / span 2;
+    @extend %card-template;
+    font-size: 1.6rem;
+    .expensesDetail div {
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      align-items: center;
+      position: relative;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      &::after {
+        position: absolute;
+        content: "";
+        width: 0.5rem;
+        background-color: #2e67f7;
+        border-radius: 0.5rem;
+        height: 100%;
+        top: 0;
+      }
+      .productTitle {
+        grid-column: 1 / span 4;
+      }
+      .price {
+        grid-column: 5 / span 3;
+      }
+      i {
+        color: #2e67f7;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+@media (max-width:800px){
+  .container{
+    display: block;
+    #detail{
+      margin-top: 2rem;
+    }
+  }
+}

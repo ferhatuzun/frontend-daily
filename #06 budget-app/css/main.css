@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 10px; }
+
+body {
+  background-color: #d1ddf7; }
+
+.container, .container #budget .totalBudget,
+.container #budget .productName,
+.container #budget .productPrice,
+.container #expenses .totalBudget,
+.container #expenses .productName,
+.container #expenses .productPrice, .container #budget .btn-primary,
+.container #expenses .btn-primary {
+  font-family: "Poppins", system-ui;
+  font-weight: 500;
+  font-style: normal; }
+
+.container #budget,
+.container #expenses, .container #expensesList {
+  background-color: #fff;
+  padding: 2rem;
+  margin-top: 2rem;
+  border-radius: 1rem; }
+  .container #budget .title, .container #expenses .title, .container #expensesList .title {
+    font-size: 2rem;
+    margin-bottom: 1rem; }
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 95vw;
+  margin: auto;
+  gap: 2rem; }
+  .container #budget .productName,
+  .container #expenses .productName {
+    margin-bottom: 1rem !important; }
+  .container #budget .totalBudget,
+  .container #budget .productName,
+  .container #budget .productPrice,
+  .container #expenses .totalBudget,
+  .container #expenses .productName,
+  .container #expenses .productPrice {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    font-weight: 400;
+    margin-bottom: 2rem; }
+    .container #budget .totalBudget::placeholder,
+    .container #budget .productName::placeholder,
+    .container #budget .productPrice::placeholder,
+    .container #expenses .totalBudget::placeholder,
+    .container #expenses .productName::placeholder,
+    .container #expenses .productPrice::placeholder {
+      font-weight: 300; }
+  .container #budget .btn-primary,
+  .container #expenses .btn-primary {
+    background-color: #2e67f7;
+    padding: 1.2rem 1.8rem;
+    color: #fff;
+    border: none;
+    border-radius: 0.7rem;
+    cursor: pointer;
+    transition: background-color 0.1s ease-in; }
+    .container #budget .btn-primary:hover,
+    .container #expenses .btn-primary:hover {
+      background-color: #0740d3; }
+  .container #detail {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 1.6rem;
+    padding: 2rem;
+    grid-column: 1 / span 2;
+    background-color: #2e67f7;
+    border-radius: 0.5rem;
+    color: #fff; }
+    .container #detail .title {
+      font-weight: 600;
+      letter-spacing: 0.05rem; }
+    .container #detail .money,
+    .container #detail .expenses,
+    .container #detail .balance {
+      font-weight: 300; }
+  .container #expensesList {
+    grid-column: 1 / span 2;
+    font-size: 1.6rem; }
+    .container #expensesList .expensesDetail div {
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      align-items: center;
+      position: relative;
+      padding: 1rem;
+      margin-bottom: 2rem; }
+      .container #expensesList .expensesDetail div::after {
+        position: absolute;
+        content: "";
+        width: 0.5rem;
+        background-color: #2e67f7;
+        border-radius: 0.5rem;
+        height: 100%;
+        top: 0; }
+      .container #expensesList .expensesDetail div .productTitle {
+        grid-column: 1 / span 4; }
+      .container #expensesList .expensesDetail div .price {
+        grid-column: 5 / span 3; }
+      .container #expensesList .expensesDetail div i {
+        color: #2e67f7;
+        cursor: pointer; }
+
+@media (max-width: 800px) {
+  .container {
+    display: block; }
+    .container #detail {
+      margin-top: 2rem; } }

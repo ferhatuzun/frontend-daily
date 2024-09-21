@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 10px; }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #04263e; }
+
+#container, #container #search #country, #container #result #resultContainer .extra .humidityContainer,
+#container #result #resultContainer .extra .windContainer {
+  font-family: "Poppins", system-ui;
+  font-weight: 400;
+  font-style: normal; }
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 45rem;
+  margin-top: 5rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 3rem 2rem; }
+  #container #search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 40rem;
+    font-size: 3rem; }
+    #container #search #country {
+      font-size: 2rem;
+      flex-grow: 2;
+      border: none; }
+      #container #search #country:focus {
+        outline: none; }
+    #container #search .fa-magnifying-glass {
+      cursor: pointer; }
+  #container #result {
+    width: 100%;
+    height: 0px;
+    padding: 0 6rem;
+    transition: all 0.5s;
+    overflow: hidden; }
+    #container #result #onError {
+      display: none;
+      margin-top: 5rem;
+      text-align: center;
+      scale: 0;
+      opacity: 0; }
+      #container #result #onError .img404 {
+        width: 27rem;
+        transition: all 0.5s; }
+      #container #result #onError .text404 {
+        font-size: 2rem;
+        margin-top: 1rem; }
+    #container #result #resultContainer {
+      display: none;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      scale: 0;
+      opacity: 0; }
+      #container #result #resultContainer .resultImg {
+        width: 25rem;
+        margin-bottom: 2rem; }
+      #container #result #resultContainer .centigradeContainer .centigradeText {
+        position: relative;
+        font-size: 6rem;
+        font-weight: 700; }
+      #container #result #resultContainer .centigradeContainer span {
+        position: absolute;
+        top: .5rem;
+        right: -1.5rem;
+        font-size: 2rem; }
+      #container #result #resultContainer h4 {
+        font-size: 1.5rem;
+        margin-bottom: 3rem; }
+      #container #result #resultContainer .extra {
+        display: flex;
+        justify-content: space-between;
+        gap: 10rem;
+        scale: 0;
+        opacity: 0; }
+        #container #result #resultContainer .extra .humidityContainer,
+        #container #result #resultContainer .extra .windContainer {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          font-weight: 600; }
+          #container #result #resultContainer .extra .humidityContainer i,
+          #container #result #resultContainer .extra .windContainer i {
+            font-size: 3rem; }
+          #container #result #resultContainer .extra .humidityContainer p,
+          #container #result #resultContainer .extra .windContainer p {
+            font-size: 1.3rem;
+            width: 10rem; }
+
+.fade-in {
+  animation: 0.5s fadeIn forwards;
+  animation-delay: 0.5s; }
+
+@keyframes fadeIn {
+  to {
+    scale: 1;
+    opacity: 1; } }
+
+@media (max-width: 500px) {
+  html {
+    font-size: 7px; } }

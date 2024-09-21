@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2f2e84;
+  width: 100%;
+  height: 100vh; }
+
+.passwordGenerate, .passwordGenerate .cardTop h1, .passwordGenerate .generatePassword .passwordContainer input, .passwordGenerate .generatePassword .generateButton a {
+  font-family: "Poppins", system-ui;
+  font-weight: 500;
+  font-style: normal; }
+
+.passwordGenerate {
+  background-color: #fff;
+  width: 400px;
+  border-radius: 10px; }
+  .passwordGenerate .cardTop h1 {
+    padding: 15px 25px;
+    font-size: 20px; }
+  .passwordGenerate .generatePassword .passwordContainer {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    position: relative;
+    margin-top: 10px; }
+    .passwordGenerate .generatePassword .passwordContainer i {
+      font-size: 20px;
+      position: absolute;
+      right: 25px;
+      cursor: pointer; }
+    .passwordGenerate .generatePassword .passwordContainer input {
+      padding: 10px 15px;
+      width: 100%;
+      font-size: 15px;
+      letter-spacing: 1px;
+      border-radius: 10px;
+      border: 1px solid gray; }
+  .passwordGenerate .generatePassword .passwordLengthContainer {
+    margin-top: 15px;
+    padding: 15px;
+    position: relative; }
+    .passwordGenerate .generatePassword .passwordLengthContainer .passwordLength {
+      width: 100%;
+      margin-top: 10px; }
+    .passwordGenerate .generatePassword .passwordLengthContainer .passwordLengthText {
+      position: absolute;
+      right: 20px;
+      bottom: 40px; }
+  .passwordGenerate .generatePassword .passwordSettingContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-size: 14px; }
+    .passwordGenerate .generatePassword .passwordSettingContainer p {
+      align-self: flex-start; }
+    .passwordGenerate .generatePassword .passwordSettingContainer .passwordSetting {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5px 50px; }
+      .passwordGenerate .generatePassword .passwordSettingContainer .passwordSetting div {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        margin-top: 10px; }
+        .passwordGenerate .generatePassword .passwordSettingContainer .passwordSetting div input {
+          transform: scale(1.3); }
+        .passwordGenerate .generatePassword .passwordSettingContainer .passwordSetting div p {
+          font-weight: 400; }
+  .passwordGenerate .generatePassword .generateButton {
+    padding: 15px; }
+    .passwordGenerate .generatePassword .generateButton a {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      width: 100%;
+      background-color: #2F2E84;
+      color: #fff;
+      padding: 15px 30px;
+      border-radius: 10px;
+      border: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 16px; }
