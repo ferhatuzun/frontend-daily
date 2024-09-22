@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Box Shadow Generator</title>
+  </head>
+  <body>
+    <div id="copyClipboard">
+      Copy Clipboard
+    </div>
+    <div class="container">
+      <div id="output"></div>
+      <div id="controller">
+        <div>
+          <span>Horizontal Shadow:</span>
+          <input type="range" min="-200" max="200" value="0" class="horizontalShadow" />
+        </div>
+        <div>
+          <span>Vertical Shadow:</span>
+          <input type="range" min="-200" max="200" value="0" class="verticalShadow" />
+        </div>
+        <div>
+          <span>Blur Radius:</span>
+          <input type="range" min="0" max="300" value="0" class="blurRadius">
+        </div>
+        <div>
+          <span>Spread Radius:</span>
+          <input type="range" min="-200" max="200" class="spreadRadius">
+        </div>
+        <div>
+          <span>Border Radius:</span>
+          <input type="range" min="0" max="50" value="0" class="borderRadius">
+        </div>
+        <div>
+          <span>Shadow Opacity:</span>
+          <input type="range" min="0" max="1" step="0.1" value="1"  class="shadowOpacity">
+        </div>
+        <div>
+          <span>Inset Shadow:</span>
+          <input type="checkbox" class="insertShadow">
+        </div>
+        <div>
+          <span>Shadow Color:</span>
+          <input type="color" class="shadowColor">
+        </div>
+      </div>
+      <div id="codes">
+        <textarea disabled></textarea>
+        <button>Copy Styles</button>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
