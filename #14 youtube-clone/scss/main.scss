@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+$gray: #212121;
+$white: #fff;
+$darkGray: #121212;
+$lightGray: #303030;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 9px;
+}
+body {
+  background-color: $gray;
+}
+a {
+  text-decoration: none;
+  color: $white;
+}
+%roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10rem;
+  width: 100%;
+  height: 6rem;
+  background-color: $gray;
+  padding: 6rem 2rem;
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  .logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    i {
+      font-size: 2rem;
+      color: $white;
+    }
+  }
+  .searchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 40%;
+    gap: 2rem;
+    .search {
+      display: flex;
+      width: 100%;
+      .searchInput {
+        width: 100%;
+        padding: 1.5rem 1rem;
+        background-color: $darkGray;
+        border: none;
+        border-radius: 3rem 0 0 3rem;
+        color: $white;
+        &:focus {
+          outline: none;
+        }
+      }
+      button {
+        background-color: $lightGray;
+        border: none;
+        width: 5rem;
+        color: $white;
+      }
+    }
+    i {
+      color: $white;
+      font-size: 2rem;
+    }
+  }
+
+  .userContainer {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem;
+    i {
+      font-size: 2rem;
+      color: $white;
+    }
+    .userPhoto {
+      width: 4rem;
+    }
+  }
+}
+
+#container {
+  display: grid;
+  grid-template-columns: 15% 85%;
+  background-color: $gray;
+  @extend %roboto-medium;
+  i {
+    font-size: 2rem;
+  }
+}
+
+#menu {
+  position: sticky;
+  left: 0;
+  top: 12rem;
+  z-index: 900;
+  overflow-y: scroll;
+  height: calc(100vh - 12rem);
+  &::-webkit-scrollbar {
+    height: 8px;
+    width: 0.5rem;
+    border-radius: 2rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $gray;
+    border-radius: 2rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $lightGray;
+    border-radius: 10px;
+  }
+  .mainMenu,
+  .specialMenu,
+  .subscriptionMenu,
+  .moreMenu {
+    a {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      padding-bottom: 1rem;
+      padding: 1.5rem 2rem;
+      font-size: 1.4rem;
+      &:hover {
+        background-color: $lightGray;
+      }
+      &:last-child {
+        border-bottom: 0.1rem solid $lightGray;
+      }
+    }
+  }
+
+  .menuTitle {
+    color: $white;
+    padding: 0 2rem;
+    font-size: 1.6rem;
+    margin: 1rem 0;
+  }
+
+  .subscriptionMenu {
+    .menuImage {
+      width: 2.4rem;
+      height: 2.4rem;
+      border-radius: 50%;
+    }
+  }
+}
+
+#content {
+  background-color: $gray;
+  .filter {
+    position: sticky;
+    top: 12rem;
+    z-index: 800;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    border-top: 0.1rem solid $lightGray;
+    padding: 1rem 3rem;
+    background-color: $gray;
+    a {
+      font-size: 1.6rem;
+      padding: 1rem 2rem;
+      background-color: $lightGray;
+      border-radius: 2rem;
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+  }
+  .videoContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: $darkGray;
+    min-height: 100vh;
+    z-index: -1;
+    padding-top: 3rem;
+    .card {
+      padding: 2rem;
+      .cardTop {
+        position: relative;
+        .cardImage {
+          width: 100%;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        .cardDuration {
+          position: absolute;
+          bottom: 0.5rem;
+          right: 0.5rem;
+          font-size: 1rem;
+          color: $white;
+          background-color: $darkGray;
+          padding: 0.7rem 1rem;
+        }
+      }
+    }
+    .cardBody {
+      display: flex;
+      margin-top: 1rem;
+      gap: 1rem;
+      .channelProfile {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+      }
+      div {
+        color: $white;
+        .videoTitle {
+          width: 100%;
+          font-size: 1.6rem;
+          font-weight: bold;
+        }
+        .channelName {
+          display: inline-block;
+          font-size: 1.3rem;
+          margin-top: 1rem;
+          opacity: 0.7;
+        }
+        .videoDetail {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  #container {
+    grid-template-columns: 8rem auto;
+  }
+  #menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .mainMenu,
+    .specialMenu,
+    .subscriptionMenu,
+    .moreMenu {
+      span {
+        display: none;
+      }
+      .menuTitle {
+        display: none;
+      }
+    }
+  }
+
+  #content {
+    .videoContainer {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  #content {
+    .filter {
+      display: none;
+    }
+    .videoContainer {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  #container {
+    grid-template-columns: 100%;
+    #menu {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  #navbar {
+    flex-shrink: 0;
+  }
+}
+
+/*! ***************/
+
+.menuFix {
+  display: none !important;
+}
+.containerFix {
+  grid-template-columns: 100% !important;
+}
+
+#navbar {
+  @media screen and (max-width: 1200px) {
+    padding: 4rem 1rem;
+    gap: 5rem;
+
+    .logoContainer i,
+    .searchContainer i,
+    .userContainer i {
+      font-size: 1.8rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 3rem 1rem;
+    gap: 2rem;
+
+    .searchContainer {
+      flex-basis: 50%;
+    }
+
+    .searchInput {
+      padding: 1rem;
+    }
+
+    button {
+      width: 4rem;
+    }
+
+    .userContainer .userPhoto {
+      width: 3rem;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 2rem 0.5rem;
+    gap: 1rem;
+
+    .searchContainer {
+      flex-basis: 60%;
+    }
+
+    .searchInput {
+      padding: 0.8rem;
+    }
+
+    button {
+      width: 3rem;
+    }
+
+    .userContainer .userPhoto {
+      width: 2.5rem;
+    }
+  }
+}
